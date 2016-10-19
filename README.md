@@ -21,7 +21,7 @@ loop do
 end
 ```
 
-This will output `I have found the Time Machine!` an infinite number of times in your Terminal. Use `Control`+`C` to break out of the loop in your terminal or just exit the session.
+This will output `I have found the Time Machine!` an infinite number of times in your Terminal. Use `Control`+`C` to break out of the loop in your terminal (you might need to press it twice).  Worst case scenario, you can close the terminal and open a new one (in c9: Window > New Terminal).
 
 Loops start with the `loop` keyword and are opened by the following `do` and `end` block. All the code that goes inside the `do` and `end` is considered the loop's body or block; that's the code that will execute on repeat.
 
@@ -43,8 +43,8 @@ Our loop starts, it prints our message, and then the next line of code, `break` 
 ```ruby
 counter = 0 # Start our counter at 0, we have never run the loop
 loop do # Start our loop
-  # increment our counter by 1 and set it equal to the sum of its current value, plus 1. 
-  counter = counter + 1
+  # increment the current value of counter by 1 and reassign that value back to counter. 
+  counter += counter + 1
 
   # Do Something
   puts "Iteration #{counter} of the loop"
@@ -71,73 +71,3 @@ Iteration 10 of the loop
 ```
 
 This is a common basic loop. With this construct we can `break` a `loop` based on any condition, but the iteration count is a very common condition for stopping the loop.
-
-## Advanced: The Add-And-Assignment (or Plus-Equals) Operator `+=`  
-
-Above, we use the addition operator (`+`) and the assignment operator `=` separately to reset the `counter` variable to the sum of its old value, plus one, every time we repeat the loop. The add-and-assignment operator combines the functionality of the addition operator *and* the assignment operator. For example, let's say that our favorite cat Maru has just had a birthday:
-
-```ruby
-adorable_cat = "Maru"
-age = 7
-
-# you've just had a birthday! add one year to your age:
-age = 7 + 1
-```
-
-Let's take another look at our `age` variable and the operation of incrementing it by `1`:
-
-```ruby
-age = 7
-# age starts at 7 and will get incremented after the birthday
-age = age + 1
-age #=> 8
-```
-
-Here, we have one variable, `age` which starts at `7`. Then, we reassign `age` to hold the original value of `age` plus `1`. `age + 1` is evaluated first, returning `8`, and then we are assigning the result of that expression (everything on the right of `age =`, which again is `age + 1`, which just means `8`), as the new value for `age`. We can make this even more elegant by using the add-and-assignment operator `+=` instead:
-
-```ruby
-age = 7
-age += 1
-age #=> 8
-```
-
-Here, `+=` serves the purpose of the above line: `age = age + 1`. It's simply condensing that action. It adds a numerical value (or other variable) to a numerical variable, and reassigns that variable to hold the sum of that variable's original value plus the added value (or other variable).
-
-When we use `+=`, we call this action "incrementing". We are adding a new increment to a known value. Why is that useful? For looping.
-
-Let's re-write our loop from earlier, this time using the `+=` operator:
-
-```ruby
-counter = 0
-
-loop do 
-  counter += 1
-  puts "Iteration #{counter} of the loop"
-  if counter >= 10 
-    break
-  end
-end
-```
-
-If you copy this to IRB you'll see the same input as above:
-
-```
-Iteration 1 of the loop
-Iteration 2 of the loop
-Iteration 3 of the loop
-Iteration 4 of the loop
-Iteration 5 of the loop
-Iteration 6 of the loop
-Iteration 7 of the loop
-Iteration 8 of the loop
-Iteration 9 of the loop
-Iteration 10 of the loop
-```
-
-
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/looping-readme' title='Looping'>Looping</a> on Learn.co and start learning to code for free.</p>
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/looping-readme'>Loops</a> on Learn.co and start learning to code for free.</p>
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/looping-readme'>Looping</a> on Learn.co and start learning to code for free.</p>
