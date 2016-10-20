@@ -44,7 +44,7 @@ Our loop starts, it prints our message, and then the next line of code, `break` 
 counter = 0 # Start our counter at 0, we have never run the loop
 loop do # Start our loop
   # increment the current value of counter by 1 and reassign that value back to counter. 
-  counter += counter + 1
+  counter + 1
 
   # Do Something
   puts "Iteration #{counter} of the loop"
