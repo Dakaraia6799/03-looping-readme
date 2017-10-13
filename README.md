@@ -2,10 +2,10 @@
 
 ## Objectives
 
-2. Introduce the concept of a basic `loop`.
-3. Introduce the `break` keyword.
-4. Introduce the concept of an incrementing counter.
-5. `break` out of a `loop` based on a `counter`.
+1. Introduce the concept of a basic `loop`.
+2. Introduce the `break` keyword.
+3. Introduce the concept of an incrementing counter.
+4. `break` out of a `loop` based on a `counter`.
 
 ## Introduction
 
@@ -44,7 +44,7 @@ Our loop starts, it prints our message, and then the next line of code, `break` 
 counter = 0 # Start our counter at 0, we have never run the loop
 loop do # Start our loop
   # increment the current value of counter by 1 and reassign that value back to counter. 
-  counter + 1
+  counter += 1
 
   # Do Something
   puts "Iteration #{counter} of the loop"
